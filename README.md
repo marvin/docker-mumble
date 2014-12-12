@@ -1,3 +1,5 @@
+**This project is no longer under development, if you'd like to fork and continue the project please do! Let me know your fork and I'll link to it.**
+
 # docker-mumble
 
 A nice and easy way to get a Mumble server up and running using docker. For help
