@@ -28,7 +28,7 @@ already created before running `mkdir -p /mnt/mumble`.
 From now on when you start/stop docker-mumble you should use the container id
 with the following commands. To get your container id, after you initial run
 type `sudo docker ps` and it will show up on the left side followed by the image
-name which is `overshard/mumble:latest`.
+name which is `asonawalla/mumble:latest`.
 
     sudo docker start <container_id>
     sudo docker stop <container_id>
