@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mumble-server
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mumble-server
+    spec:
+      volumes:
+        - name: scratch
+          emptyDir: {}
+      containers:
+      - name: mumble-server
+        image: gcr.io/azim-personal/mumble-server:latest
+        ports:
+        - containerPort: 64738
+          hostPort: 64738
+        volumeMounts:
+          - mountPath: /data
+            name: scratch
